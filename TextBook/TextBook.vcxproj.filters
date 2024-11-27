@@ -27,4 +27,9 @@
   <ItemGroup>
     <None Include="TextBookApp.uml" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\Downloads\TexBookUml.drawio.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

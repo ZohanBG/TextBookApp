@@ -1,0 +1,59 @@
+@startuml
+class Textbook {
+    - title: string
+    - author: string
+    - edition: int
+    - isbn: string
+    - releaseDate: string
+    - copies: int
+    - approved: bool
+    - approvalDate: string
+    - price: double
+    + Textbook()
+    + Textbook(title: string, author: string, edition: int, isbn: string, releaseDate: string, copies: int, approved: bool, approvalDate: string, price: double)
+    + getTitle(): string
+    + setTitle(title: string): void
+    + getAuthor(): string
+    + setAuthor(author: string): void
+    + getEdition(): int
+    + setEdition(edition: int): void
+    + getISBN(): string
+    + setISBN(isbn: string): void
+    + getReleaseDate(): string
+    + setReleaseDate(releaseDate: string): void
+    + getCopies(): int
+    + setCopies(copies: int): void
+    + isApproved(): bool
+    + setApproved(approved: bool): void
+    + getApprovalDate(): string
+    + setApprovalDate(approvalDate: string): void
+    + getPrice(): double
+    + setPrice(price: double): void
+}
+
+class Distributor {
+    - name: string
+    - address: string
+    - phone: string
+    + Distributor()
+    + Distributor(name: string, address: string, phone: string)
+    + getName(): string
+    + setName(name: string): void
+    + getAddress(): string
+    + setAddress(address: string): void
+    + getPhone(): string
+    + setPhone(phone: string): void
+}
+
+class Order {
+    - distributor: Distributor
+    - textbooks: vector<Textbook>
+    + Order(distributor: Distributor)
+    + addTextbook(textbook: Textbook): void
+    + calculateTotal(): double
+    + displayOrder(): void
+}
+
+Order "1" --> "1" Distributor
+Order "1" --> "*" Textbook
+@enduml
