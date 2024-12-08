@@ -140,6 +140,15 @@
   <ItemGroup>
     <Image Include="..\..\..\Downloads\TexBookUml.drawio.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Distributor.h" />
+    <ClInclude Include="DistributorFactory.h" />
+    <ClInclude Include="InputHelper.h" />
+    <ClInclude Include="Order.h" />
+    <ClInclude Include="OrderFactory.h" />
+    <ClInclude Include="TextBook.h" />
+    <ClInclude Include="TextbookFactory.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
